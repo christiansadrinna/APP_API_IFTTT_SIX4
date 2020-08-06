@@ -46,7 +46,7 @@ namespace IO.Swagger.Controllers
         /// <response code="503">Your service is not available at the moment, but IFTTT should try again later.</response>
         [HttpPost]
         [Route("/ifttt/v1/actions/create_story")]
-        [Authorize(AuthenticationSchemes = ApiKeyAuthenticationHandler.SchemeName)]
+        // [Authorize(AuthenticationSchemes = ApiKeyAuthenticationHandler.SchemeName)]
         [ValidateModelState]
         [SwaggerOperation("ActionsCreateStoryPost")]
         [SwaggerResponse(statusCode: 200, type: typeof(InlineResponse2004), description: "The action response.")]

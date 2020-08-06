@@ -40,14 +40,14 @@ namespace IO.Swagger.Controllers
         /// <response code="503">Your service is not available at the moment, but IFTTT should try again later.</response>
         [HttpGet]
         [Route("/ifttt/v1/status")]
-        [Authorize(AuthenticationSchemes = ApiKeyAuthenticationHandler.SchemeName)]
+        // [Authorize(AuthenticationSchemes = ApiKeyAuthenticationHandler.SchemeName)]
         [ValidateModelState]
         [SwaggerOperation("StatusGet")]
         [SwaggerResponse(statusCode: 503, type: typeof(Errors), description: "Your service is not available at the moment, but IFTTT should try again later.")]
         public virtual IActionResult StatusGet([FromHeader]string accept, [FromHeader]string acceptCharset, [FromHeader]List<string> acceptEncoding, [FromHeader]string xRequestID)
         { 
             //TODO: Uncomment the next line to return response 200 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
-            // return StatusCode(200);
+            return StatusCode(200);
 
             //TODO: Uncomment the next line to return response 503 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(503, default(Errors));

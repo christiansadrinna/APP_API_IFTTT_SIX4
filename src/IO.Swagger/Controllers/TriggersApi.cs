@@ -46,7 +46,7 @@ namespace IO.Swagger.Controllers
         /// <response code="503">Your service is not available at the moment, but IFTTT should try again later.</response>
         [HttpPost]
         [Route("/ifttt/v1/triggers/knowledge")]
-        [Authorize(AuthenticationSchemes = ApiKeyAuthenticationHandler.SchemeName)]
+        // [Authorize(AuthenticationSchemes = ApiKeyAuthenticationHandler.SchemeName)]
         [ValidateModelState]
         [SwaggerOperation("TriggersKnowledgePost")]
         [SwaggerResponse(statusCode: 200, type: typeof(InlineResponse2002), description: "Trigger response for knowledge.")]
@@ -107,7 +107,7 @@ namespace IO.Swagger.Controllers
         /// <response code="503">Your service is not available at the moment, but IFTTT should try again later.</response>
         [HttpPost]
         [Route("/ifttt/v1/triggers/motivation")]
-        [Authorize(AuthenticationSchemes = ApiKeyAuthenticationHandler.SchemeName)]
+        // [Authorize(AuthenticationSchemes = ApiKeyAuthenticationHandler.SchemeName)]
         [ValidateModelState]
         [SwaggerOperation("TriggersMotivationPost")]
         [SwaggerResponse(statusCode: 200, type: typeof(InlineResponse2001), description: "Trigger response for motivation.")]
@@ -168,7 +168,7 @@ namespace IO.Swagger.Controllers
         /// <response code="503">Your service is not available at the moment, but IFTTT should try again later.</response>
         [HttpPost]
         [Route("/ifttt/v1/triggers/reflection")]
-        [Authorize(AuthenticationSchemes = ApiKeyAuthenticationHandler.SchemeName)]
+        // [Authorize(AuthenticationSchemes = ApiKeyAuthenticationHandler.SchemeName)]
         [ValidateModelState]
         [SwaggerOperation("TriggersReflectionPost")]
         [SwaggerResponse(statusCode: 200, type: typeof(InlineResponse2003), description: "Trigger response for reflection.")]
@@ -229,7 +229,6 @@ namespace IO.Swagger.Controllers
         /// <response code="503">Your service is not available at the moment, but IFTTT should try again later.</response>
         [HttpPost]
         [Route("/ifttt/v1/triggers/task")]
-        [Authorize(AuthenticationSchemes = ApiKeyAuthenticationHandler.SchemeName)]
         [ValidateModelState]
         [SwaggerOperation("TriggersTaskPost")]
         [SwaggerResponse(statusCode: 200, type: typeof(InlineResponse200), description: "Trigger response for task.")]
